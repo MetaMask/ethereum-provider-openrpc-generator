@@ -38,4 +38,4 @@ you can now publish or use in your projects:
 ## Resources
 
 - [@open-rpc/generator package](https://www.npmjs.com/package/@open-rpc/generator)
-- https://github.com/etclabscore/eth-provider-generator
+- forked from: https://github.com/etclabscore/eth-provider-generator

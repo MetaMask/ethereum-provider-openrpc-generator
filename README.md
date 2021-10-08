@@ -1,24 +1,12 @@
-# OpenRPC Generator
+# OpenRPC Etheruem Provider Generator
 
-<center>
-  <span>
-    <img alt="CircleCI branch" src="https://img.shields.io/circleci/project/github/open-rpc/generator/master.svg">
-    <img src="https://codecov.io/gh/open-rpc/generator/branch/master/graph/badge.svg" />
-    <img alt="Dependabot status" src="https://api.dependabot.com/badges/status?host=github&repo=open-rpc/generator" />
-    <img alt="npm" src="https://img.shields.io/npm/dt/@open-rpc/generator.svg" />
-    <img alt="GitHub release" src="https://img.shields.io/github/release/open-rpc/generator.svg" />
-    <img alt="GitHub commits since latest release" src="https://img.shields.io/github/commits-since/open-rpc/generator/latest.svg" />
-  </span>
-</center>
-
-A Generator tool for [open-rpc](https://github.com/open-rpc/spec) APIs.
+A Generator tool for the [open-rpc](https://github.com/open-rpc/spec) Ethereum APIs.
 
 ## Features:
 
 - Built in components for:
-  - Clients
-  - Server
-  - Documentation
+  - Types
+
 - Easy to create new components
 
 
@@ -31,24 +19,22 @@ Using the CLI's `init` command, you can walk though an interactive config builde
 ### Quick start
 
 ```sh
-npm install -g @open-rpc/generator
+yarn install
 
-open-rpc-generator init
+
+yarn start
 open-rpc-generator generate -c open-rpc-generator-config.json
 ```
 
-### Generating an individual component
+should generate the type file into `generated/custom/typescript`
 
-```shell
-$ open-rpc-generator-client generate
-  -t client
-  -l typescript
-  -n petstoreClientTs
-  -d https://raw.githubusercontent.com/open-rpc/examples/master/service-descriptions/petstore-openrpc.json
-  -o ./generated
-```
+![image](https://user-images.githubusercontent.com/364566/136591763-f093641a-8d51-45a2-bf65-f980b03cb409.png)
+
+you can now publish or use in your projects:
+
+![image](https://user-images.githubusercontent.com/364566/136592834-34ef15b6-9250-4136-b333-58ab461aac0a.png)
+
 
 ## Resources
 
 - [@open-rpc/generator package](https://www.npmjs.com/package/@open-rpc/generator)
-- [example open-rpc documents](https://github.com/open-rpc/examples/tree/master/service-descriptions)

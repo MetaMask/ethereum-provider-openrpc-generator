@@ -1,7 +1,7 @@
 
 {
   "openrpcDocument": "./openrpc.json",
-  "outDir": "./generated-new",
+  "outDir": "./generated",
   "components": [
       {
           "type": "custom",

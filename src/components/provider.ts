@@ -53,30 +53,10 @@ export interface EIP1193Provider extends EventEmitter {
   /**
    * <%= method.name %>
    * @param args Arguments for <%= method.name %> request
-   * @param args.method <%= method.description || method.summary %>
+   * @param args.method - <%= method.description || method.summary %>
    */
   request(args: <%= method.name %>) : Promise<<%= methodTypings.getTypingNames("typescript", method).result %>>;
 <% }) %>
-}
-
-export class Provider extends EventEmitter implements EIP1193Provider {
-  client: Client;
-  constructor(url: string) {
-    super();
-    const transport = new HTTPTransport(url);
-    this.client = new Client(new RequestManager([transport]));
-    this.client.requestManager.connectPromise.then(() => {
-      this.emit("connect");
-    });
-    this.client.onNotification((data: any) => {
-      this.emit("message", data);
-    });
-  }
-
-  public request(args: any):  Promise<any> {
-    return this.client.request(args);
-  }
-
 }
 `);
 

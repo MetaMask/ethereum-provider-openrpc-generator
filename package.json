@@ -1,11 +1,11 @@
 {
-  "name": "@xops.net/snaps-openrpc-generator",
+  "name": "@metamask/ethereum-provider-openrpc-generator",
   "private": false,
   "version": "1.0.34",
   "description": "",
   "repository": {
     "type": "git",
-    "url": "https://github.com/xops/snaps-openrpc-generator.git"
+    "url": "https://github.com/MetaMask/ethereum-provider-openrpc-generator.git"
   },
   "main": "./build/index.js",
   "files": [
@@ -13,7 +13,7 @@
     ".node-version"
   ],
   "scripts": {
-    "start": "npm run build",
+    "start": "npm run build && open-rpc-generator generate -c open-rpc-generator-config.json",
     "test": "npm run test:lint && npm run test:unit",
     "test:unit": "jest --coverage --passWithNoTests",
     "test:integration": "npm run build && open-rpc-generator generate -c test-generator-config.json",

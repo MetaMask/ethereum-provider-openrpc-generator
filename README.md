@@ -21,9 +21,7 @@ Using the CLI's `init` command, you can walk though an interactive config builde
 ```sh
 yarn install
 
-
 yarn start
-open-rpc-generator generate -c open-rpc-generator-config.json
 ```
 
 should generate the type file into `generated/custom/typescript`

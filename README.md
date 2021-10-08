@@ -5,16 +5,14 @@ A Generator tool for the [open-rpc](https://github.com/open-rpc/spec) Ethereum A
 ## Features:
 
 - Built in components for:
-  - Types
+  - Typescript Types
 
 - Easy to create new components
 
 
 ## Usage
 
-The generator CLI has a generate command which takes a config to run. The config specifies what components you want to make, as well as the configuration for each component.
-
-Using the CLI's `init` command, you can walk though an interactive config builder.
+The generator uses the [OpenRPC Generator](https://github.com/open-rpc/generator) to generate typings for Typescript and can be expanded to many other usecases.
 
 ### Quick start
 

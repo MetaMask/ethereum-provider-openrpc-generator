@@ -1,14 +1,13 @@
-
 {
   "openrpcDocument": "./openrpc.json",
   "outDir": "./generated",
   "components": [
-      {
-          "type": "custom",
-          "name": "ethereum-provider-generator",
-          "language": "typescript",
-          "customComponent": "./build/components/provider",
-          "customType": "provider"
-      }
+    {
+      "type": "custom",
+      "name": "ethereum-provider-generator",
+      "language": "typescript",
+      "customComponent": "./build/components/provider",
+      "customType": "provider"
+    }
   ]
 }

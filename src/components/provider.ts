@@ -1,10 +1,9 @@
-import * as path from "path";
-import { move } from "fs-extra";
-import { readFile } from "fs-extra";
-import * as fs from "fs";
-import { promisify } from "util";
-import { template } from "lodash";
-import { components } from "@open-rpc/generator";
+import { components } from '@open-rpc/generator';
+import * as fs from 'fs';
+import { move, readFile } from 'fs-extra';
+import { template } from 'lodash';
+import * as path from 'path';
+import { promisify } from 'util';
 
 const writeFile = promisify(fs.writeFile);
 
@@ -60,16 +59,22 @@ export interface EIP1193Provider extends EventEmitter {
 
 const hooks: components.IHooks = {
   afterCopyStatic: [
-    async (dest, frm, component): Promise<void> => {
-      if (component.language === "typescript") {
-        return await move(path.join(dest, "_package.json"), path.join(dest, "package.json"), { overwrite: true });
+    // eslint-disable-next-line consistent-return
+    async (dest, _, component): Promise<void> => {
+      if (component.language === 'typescript') {
+        return await move(
+          path.join(dest, '_package.json'),
+          path.join(dest, 'package.json'),
+          { overwrite: true },
+        );
       }
     },
   ],
   afterCompileTemplate: [
-    async (dest, frm, component, openrpcDocument): Promise<void> => {
-      if (component.language === "typescript") {
-        const packagePath = path.join(dest, "package.json");
+    // eslint-disable-next-line consistent-return
+    async (dest, _, component, openrpcDocument): Promise<void> => {
+      if (component.language === 'typescript') {
+        const packagePath = path.join(dest, 'package.json');
         const fileContents = await readFile(packagePath);
         const pkg = JSON.parse(fileContents.toString());
         const updatedPkg = JSON.stringify({
@@ -80,12 +85,12 @@ const hooks: components.IHooks = {
 
         return await writeFile(packagePath, updatedPkg);
       }
-    }
+    },
   ],
   templateFiles: {
     typescript: [
       {
-        path: "src/index.ts",
+        path: 'src/index.ts',
         template: tsTemplate,
       },
     ],
@@ -94,10 +99,13 @@ const hooks: components.IHooks = {
 
 const providerComponent: components.IComponentModule = {
   hooks,
-  staticPath: (language: string, type?: string)=> {
-    if(!type || type?.search("nostatic") > -1) return undefined
+  staticPath: (_, type?: string) => {
+    if (!type || type?.search('nostatic') > -1) {
+      return undefined;
+    }
+    // eslint-disable-next-line no-restricted-globals
     return path.resolve(__dirname, '..', '..', `templates/provider/`);
   },
-}
+};
 
 export default providerComponent;

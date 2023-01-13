@@ -5,7 +5,6 @@ A Generator tool for the [open-rpc](https://github.com/open-rpc/spec) Ethereum A
 - Built in components for:
   - Typescript Types
 
-
 ## Usage
 
 The generator uses the [OpenRPC Generator](https://github.com/open-rpc/generator) to generate typings for Typescript and can be expanded to many other usecases.
@@ -25,7 +24,6 @@ should generate the type file into `generated/custom/typescript`
 you can now publish or use in your projects:
 
 ![image](https://user-images.githubusercontent.com/364566/136592834-34ef15b6-9250-4136-b333-58ab461aac0a.png)
-
 
 ## Resources
 

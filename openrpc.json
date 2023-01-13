@@ -1278,11 +1278,7 @@
       },
       "BlockNumberTag": {
         "description": "The optional block height description",
-        "enum": [
-          "earliest",
-          "latest",
-          "pending"
-        ],
+        "enum": ["earliest", "latest", "pending"],
         "title": "blockNumberTag",
         "type": "string"
       },
@@ -1728,11 +1724,7 @@
             "title": "transactionValue"
           }
         },
-        "required": [
-          "gas",
-          "gasPrice",
-          "nonce"
-        ],
+        "required": ["gas", "gasPrice", "nonce"],
         "title": "transaction",
         "type": "object"
       },

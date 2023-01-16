@@ -3,10 +3,6 @@ module.exports = {
 
   extends: ['@metamask/eslint-config'],
 
-  rules: {
-    'import/no-nodejs-modules': 'off',
-  },
-
   parserOptions: {
     sourceType: 'module',
   },
@@ -16,9 +12,8 @@ module.exports = {
       files: ['*.ts'],
       extends: ['@metamask/eslint-config-typescript'],
     },
-
     {
-      files: ['*.js'],
+      files: ['*.js', '*.ts'],
       parserOptions: {
         sourceType: 'script',
       },

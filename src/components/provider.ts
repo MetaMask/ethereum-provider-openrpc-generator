@@ -101,7 +101,6 @@ const providerComponent: components.IComponentModule = {
     if (!type || type?.search('nostatic') > -1) {
       return undefined;
     }
-    // eslint-disable-next-line no-restricted-globals
     return path.resolve(__dirname, '..', '..', `templates/provider/`);
   },
 };

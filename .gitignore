@@ -8,7 +8,6 @@ coverage
 test
 generated
 
-.DS_Store
 dist/
 coverage/
 docs/

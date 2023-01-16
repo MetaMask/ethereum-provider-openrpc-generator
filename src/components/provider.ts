@@ -59,10 +59,9 @@ export interface EIP1193Provider extends EventEmitter {
 
 const hooks: components.IHooks = {
   afterCopyStatic: [
-    // eslint-disable-next-line consistent-return
     async (dest, _, component): Promise<void> => {
       if (component.language === 'typescript') {
-        return await move(
+        await move(
           path.join(dest, '_package.json'),
           path.join(dest, 'package.json'),
           { overwrite: true },
@@ -71,7 +70,6 @@ const hooks: components.IHooks = {
     },
   ],
   afterCompileTemplate: [
-    // eslint-disable-next-line consistent-return
     async (dest, _, component, openrpcDocument): Promise<void> => {
       if (component.language === 'typescript') {
         const packagePath = path.join(dest, 'package.json');
@@ -83,7 +81,7 @@ const hooks: components.IHooks = {
           version: openrpcDocument.info.version,
         });
 
-        return await writeFile(packagePath, updatedPkg);
+        await writeFile(packagePath, updatedPkg);
       }
     },
   ],

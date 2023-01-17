@@ -1,5 +1,5 @@
 {
-  "openrpcDocument": "./openrpc.json",
+  "openrpcDocument": "https://raw.githubusercontent.com/ethereum/execution-apis/assembled-spec/refs-openrpc.json",
   "outDir": "./generated",
   "components": [
     {

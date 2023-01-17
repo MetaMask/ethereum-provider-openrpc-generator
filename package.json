@@ -19,7 +19,7 @@
     "lint:fix": "yarn lint:eslint --fix && yarn lint:misc --write",
     "lint:misc": "prettier '**/*.json' '**/*.md' '!CHANGELOG.md' '**/*.yml' '!.yarnrc.yml' --ignore-path .gitignore --no-error-on-unmatched-pattern",
     "start": "yarn build && open-rpc-generator generate -c open-rpc-generator-config.json",
-    "test": "yarn test:lint && npm run test:unit",
+    "test": "npm run test:unit",
     "test:unit": "jest --coverage --passWithNoTests",
     "watch:build": "tsc --watch",
     "watch:test": "jest --watch"

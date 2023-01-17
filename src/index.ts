@@ -1,5 +1,3 @@
-import provider from "./components/provider";
+import provider from './components/provider';
 
-export default {
-  provider,
-}
+export { provider };

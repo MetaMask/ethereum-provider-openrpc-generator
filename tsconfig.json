@@ -2,18 +2,12 @@
   "compilerOptions": {
     "target": "es5",
     "module": "commonjs",
-    "lib": [
-      "ES2015"
-    ],
+    "lib": ["ES2015"],
     "declaration": true,
     "outDir": "./build",
     "strict": true,
     "esModuleInterop": true,
     "resolveJsonModule": true
   },
-  "exclude": [
-    "node_modules",
-    "templates",
-    "generated"
-  ]
+  "exclude": ["node_modules", "templates", "generated"]
 }

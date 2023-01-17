@@ -2,13 +2,8 @@
 
 A Generator tool for the [open-rpc](https://github.com/open-rpc/spec) Ethereum APIs.
 
-## Features:
-
 - Built in components for:
   - Typescript Types
-
-- Easy to create new components
-
 
 ## Usage
 
@@ -29,7 +24,6 @@ should generate the type file into `generated/custom/typescript`
 you can now publish or use in your projects:
 
 ![image](https://user-images.githubusercontent.com/364566/136592834-34ef15b6-9250-4136-b333-58ab461aac0a.png)
-
 
 ## Resources
 

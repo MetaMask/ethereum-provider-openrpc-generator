@@ -1,14 +1,13 @@
-
 {
-  "openrpcDocument": "./openrpc.json",
+  "openrpcDocument": "https://raw.githubusercontent.com/ethereum/execution-apis/assembled-spec/refs-openrpc.json",
   "outDir": "./generated",
   "components": [
-      {
-          "type": "custom",
-          "name": "ethereum-provider-generator",
-          "language": "typescript",
-          "customComponent": "./build/components/provider",
-          "customType": "provider"
-      }
+    {
+      "type": "custom",
+      "name": "ethereum-provider-generator",
+      "language": "typescript",
+      "customComponent": "./build/components/provider",
+      "customType": "provider"
+    }
   ]
 }
